@@ -6,7 +6,7 @@ import { useLoaderData } from "@remix-run/react";
 
 export const loader = async ({ request }: LoaderArgs) => {
   const user = (await authenticator.isAuthenticated(request, {
-    failureRedirect: "/",
+    failureRedirect: "/login",
   })) as User;
 
   if (user.id !== "758578599715405824") {
