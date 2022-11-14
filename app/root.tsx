@@ -32,7 +32,12 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+        <main className="flex flex-col items-center h-screen bg-#050505 text-neutral-300 font-sans">
+          <h1 className="text-4xl text-red-400 text-center pt-10 font-black">
+            nexxel's microblog
+          </h1>
+          <Outlet />
+        </main>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />

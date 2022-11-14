@@ -17,9 +17,11 @@
 .flex{display:flex;}
 .flex-col{flex-direction:column;}
 .items-center{align-items:center;}
+.bg-\#050505{--un-bg-opacity:1;background-color:rgba(5,5,5,var(--un-bg-opacity));}
 .pt-10{padding-top:2.5rem;}
 .text-center{text-align:center;}
 .font-sans{font-family:"Satoshi",ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";}
-.text-3xl{font-size:1.875rem;line-height:2.25rem;}
+.text-4xl{font-size:2.25rem;line-height:2.5rem;}
 .font-black{font-weight:900;}
+.text-neutral-300{--un-text-opacity:1;color:rgba(212,212,212,var(--un-text-opacity));}
 .text-red-400{--un-text-opacity:1;color:rgba(248,113,113,var(--un-text-opacity));}
