@@ -1,5 +1,6 @@
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import {
+  Link,
   Links,
   LiveReload,
   Meta,
@@ -32,9 +33,11 @@ export default function App() {
       <body>
         <main className="flex flex-col items-center h-screen bg-#050505 text-neutral-300 font-sans">
           <h1 className="text-4xl text-red-400 text-center pt-10 font-black">
-            nexxel's microblog
+            <Link to="/">nexxel's microblog</Link>
           </h1>
-          <Outlet />
+          <div className="w-4/5 md:w-2/5">
+            <Outlet />
+          </div>
         </main>
         <ScrollRestoration />
         <Scripts />
