@@ -2,8 +2,14 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "build": "remix build",
-    "dev": "remix dev"
+    "build": "run-s \"build:*\"",
+    "build:css": "npm run generate:css",
+    "build:remix": "remix build",
+    "dev": "run-p \"dev:*\"",
+    "dev:css": "npm run generate:css -- --watch",
+    "dev:remix": "remix dev",
+    "generate:css": "unocss './app/**/*.{js,ts,jsx,tsx}' -o ./app/styles/uno.css",
+    "start": "remix-serve build"
   },
   "dependencies": {
     "@remix-run/node": "^1.7.5",
@@ -19,8 +25,12 @@
     "@remix-run/serve": "^1.7.5",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
+    "@unocss/cli": "^0.46.5",
+    "@unocss/reset": "^0.46.5",
     "eslint": "^8.27.0",
-    "typescript": "^4.8.4"
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.8.4",
+    "unocss": "^0.46.5"
   },
   "engines": {
     "node": ">=14"
