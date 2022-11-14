@@ -14,6 +14,7 @@ specifiers:
   '@unocss/cli': ^0.46.5
   '@unocss/reset': ^0.46.5
   '@vercel/node': ^2.6.2
+  date-fns: ^2.29.3
   eslint: ^8.27.0
   kysely: ^0.22.0
   kysely-planetscale: ^1.1.0
@@ -21,6 +22,7 @@ specifiers:
   prisma: ^4.6.1
   react: ^18.2.0
   react-dom: ^18.2.0
+  remix-typedjson: ^0.1.6
   typescript: ^4.8.4
   unocss: ^0.46.5
   zod: ^3.19.1
@@ -32,10 +34,12 @@ dependencies:
   '@remix-run/react': 1.7.5_biqbaboplfbrettd7655fr4n2y
   '@remix-run/vercel': 1.7.5_5csgfdyx42t4eycedaksgbtf7q
   '@vercel/node': 2.6.2
+  date-fns: 2.29.3
   kysely: 0.22.0
   kysely-planetscale: 1.1.0_y2qhv4jbpuh4ntzbx65rrthyae
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  remix-typedjson: 0.1.6_itez4zysg2ykqb3eclchs77vha
   zod: 3.19.1
 
 devDependencies:
@@ -7314,6 +7318,17 @@ packages:
       mdast-util-to-hast: 11.3.0
       unified: 10.1.2
     dev: true
+
+  /remix-typedjson/0.1.6_itez4zysg2ykqb3eclchs77vha:
+    resolution: {integrity: sha512-3weYEM1drz7la8orRQPJS0iwIj6Zzk4Fimr9cm7srTQow2TArtxTmeZIHicEYrq0EAcBOhXAyxCaik7zmoavXQ==}
+    peerDependencies:
+      '@remix-run/react': ^1.6.5
+      '@remix-run/server-runtime': ^1.6.5
+      react: ^17.0.2 || ^18.0.0
+    dependencies:
+      '@remix-run/react': 1.7.5_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+    dev: false
 
   /repeat-element/1.1.4:
     resolution: {integrity: sha512-LFiNfRcSu7KK3evMyYOuCzv3L10TW7yC1G2/+StMjK8Y6Vqd2MG7r/Qjw4ghtuCOjFvlnms/iMmLqpvW/ES/WQ==}

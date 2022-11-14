@@ -10,7 +10,7 @@ interface Database {
 export const db = new Kysely<Database>({
   dialect: new PlanetScaleDialect({
     host: "aws.connect.psdb.cloud",
-    username: env.DATABASE_USER,
+    username: env.DATABASE_USERNAME,
     password: env.DATABASE_PASSWORD,
   }),
 });

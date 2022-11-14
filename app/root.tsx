@@ -10,7 +10,6 @@ import {
 import reset from "@unocss/reset/tailwind.css";
 
 import uno from "~/styles/uno.css";
-import globals from "~/styles/globals.css";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -21,7 +20,6 @@ export const meta: MetaFunction = () => ({
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: reset },
   { rel: "stylesheet", href: uno },
-  { rel: "stylesheet", href: globals },
 ];
 
 export default function App() {
