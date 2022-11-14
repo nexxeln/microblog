@@ -9,15 +9,21 @@
     "dev:css": "npm run generate:css -- --watch",
     "dev:remix": "remix dev",
     "generate:css": "unocss './app/**/*.{js,ts,jsx,tsx}' -o ./app/styles/uno.css",
+    "postinstall": "prisma generate",
     "start": "remix-serve build"
   },
   "dependencies": {
+    "@planetscale/database": "^1.4.0",
+    "@prisma/client": "^4.6.1",
     "@remix-run/node": "^1.7.5",
     "@remix-run/react": "^1.7.5",
     "@remix-run/vercel": "^1.7.5",
     "@vercel/node": "^2.6.2",
+    "kysely": "^0.22.0",
+    "kysely-planetscale": "^1.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "zod": "^3.19.1"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.7.5",
@@ -29,6 +35,7 @@
     "@unocss/reset": "^0.46.5",
     "eslint": "^8.27.0",
     "npm-run-all": "^4.1.5",
+    "prisma": "^4.6.1",
     "typescript": "^4.8.4",
     "unocss": "^0.46.5"
   },
