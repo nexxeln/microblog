@@ -3,7 +3,7 @@ import type { Microblog } from "@prisma/client";
 import { typedjson, useTypedLoaderData } from "remix-typedjson";
 import { formatRFC7231 } from "date-fns";
 
-import { getMicroblogFromId } from "~/core/microblog.server";
+import { getMicroblogFromId } from "~/core/models/microblog.server";
 import { Link, useCatch } from "@remix-run/react";
 
 export const loader = async ({ params }: LoaderArgs) => {

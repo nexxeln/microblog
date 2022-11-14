@@ -1,4 +1,4 @@
-import { db } from "./db.server";
+import { db } from "../db.server";
 
 export const getAllMicroblogs = async () => {
   return await db

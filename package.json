@@ -24,6 +24,8 @@
     "kysely-planetscale": "^1.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "remix-auth": "^3.3.0",
+    "remix-auth-socials": "^1.0.2",
     "remix-typedjson": "^0.1.6",
     "zod": "^3.19.1"
   },

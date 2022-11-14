@@ -9,10 +9,10 @@ const envSchema = z.object({
   DATABASE_URL: z.string(),
   DATABASE_USERNAME: z.string(),
   DATABASE_PASSWORD: z.string(),
-  //   COOKIE_SECRET: z.string(),
-  //   DISCORD_CLIENT_ID: z.string(),
-  //   DISCORD_CLIENT_SECRET: z.string(),
-  //   DISCORD_REDIRECT_URI: z.string(),
+  SESSION_SECRET: z.string(),
+  DISCORD_CLIENT_ID: z.string(),
+  DISCORD_CLIENT_SECRET: z.string(),
+  SITE_URL: z.string().url(),
 });
 
 export const env = envSchema.parse(process.env);

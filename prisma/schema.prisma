@@ -9,6 +9,12 @@ datasource db {
   referentialIntegrity = "prisma"
 }
 
+model User {
+  id          String  @id
+  displayName String
+  avatar      String?
+}
+
 model Microblog {
   id        String   @id @default(cuid())
   createdAt DateTime @default(now())

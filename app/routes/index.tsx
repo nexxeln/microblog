@@ -1,9 +1,9 @@
-import { Link } from "@remix-run/react";
+import { Form, Link } from "@remix-run/react";
 import { typedjson, useTypedLoaderData } from "remix-typedjson";
 import type { Microblog } from "@prisma/client";
 import { formatDistanceToNow } from "date-fns";
 
-import { getAllMicroblogs } from "~/core/microblog.server";
+import { getAllMicroblogs } from "~/core/models/microblog.server";
 
 export const loader = async () => {
   const microblogs = await getAllMicroblogs();
@@ -21,6 +21,10 @@ export default function Index() {
           <MicroblogCard key={microblog.id} {...microblog} />
         ))}
       </div>
+
+      <Form action="/auth/discord" method="post">
+        <button>hi</button>
+      </Form>
     </section>
   );
 }
