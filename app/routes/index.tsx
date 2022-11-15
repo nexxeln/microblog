@@ -28,11 +28,11 @@ export default function Index() {
 const MicroblogCard: React.FC<Microblog> = ({ id, text, createdAt }) => {
   return (
     <Link to={`/${id}`}>
-      <article className="flex flex-col text-neutral-1 text-lg items-start p-4 border-x border-t border-neutral-7">
+      <article className="flex flex-col text-neutral-1 text-blue- text-lg items-start p-4 border-x border-t border-neutral-7">
         <span className="text-sm text-neutral-4">
           {formatDistanceToNow(createdAt)} ago
         </span>
-        <span>{text}</span>
+        <div dangerouslySetInnerHTML={{ __html: text }} className="microblog" />
       </article>
     </Link>
   );

@@ -38,7 +38,7 @@ const MicroblogPageCard: React.FC<Microblog> = ({ id, text, createdAt }) => {
   return (
     <article className="w-full flex flex-col text-neutral-1 text-lg items-start border-y border-neutral-7 p-4 hover:bg-#101010 transition">
       <span className="text-sm text-neutral-4">{formatRFC7231(createdAt)}</span>
-      <span>{text}</span>
+      <div dangerouslySetInnerHTML={{ __html: text }} className="microblog" />
     </article>
   );
 };

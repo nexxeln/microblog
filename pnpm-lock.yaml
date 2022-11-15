@@ -9,6 +9,7 @@ specifiers:
   '@remix-run/react': ^1.7.5
   '@remix-run/serve': ^1.7.5
   '@remix-run/vercel': ^1.7.5
+  '@types/marked': ^4.0.7
   '@types/react': ^18.0.25
   '@types/react-dom': ^18.0.8
   '@unocss/cli': ^0.46.5
@@ -19,6 +20,7 @@ specifiers:
   eslint: ^8.27.0
   kysely: ^0.22.0
   kysely-planetscale: ^1.1.0
+  marked: ^4.2.2
   npm-run-all: ^4.1.5
   prisma: ^4.6.1
   react: ^18.2.0
@@ -42,6 +44,7 @@ dependencies:
   date-fns: 2.29.3
   kysely: 0.22.0
   kysely-planetscale: 1.1.0_y2qhv4jbpuh4ntzbx65rrthyae
+  marked: 4.2.2
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   remix-auth: 3.3.0_@remix-run+react@1.7.5
@@ -54,6 +57,7 @@ devDependencies:
   '@remix-run/dev': 1.7.5_67odqug3q6zvwws4422s5yrks4
   '@remix-run/eslint-config': 1.7.5_u5s2ztivgin3yy4srvdhm3tgpm
   '@remix-run/serve': 1.7.5_biqbaboplfbrettd7655fr4n2y
+  '@types/marked': 4.0.7
   '@types/react': 18.0.25
   '@types/react-dom': 18.0.8
   '@unocss/cli': 0.46.5
@@ -1963,6 +1967,10 @@ packages:
     resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
     dependencies:
       '@types/node': 18.11.9
+    dev: true
+
+  /@types/marked/4.0.7:
+    resolution: {integrity: sha512-eEAhnz21CwvKVW+YvRvcTuFKNU9CV1qH+opcgVK3pIMI6YZzDm6gc8o2vHjldFk6MGKt5pueSB7IOpvpx5Qekw==}
     dev: true
 
   /@types/mdast/3.0.10:
@@ -5873,6 +5881,12 @@ packages:
     resolution: {integrity: sha512-WWC0ZuMzCyDHYCasEGs4IPvLyTGftYwh6wIEOULOF0HXcqZlhwRzrK0w2VUlxWA98xnvb/jszw4ZSkJ6ADpM6Q==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /marked/4.2.2:
+    resolution: {integrity: sha512-JjBTFTAvuTgANXx82a5vzK9JLSMoV6V3LBVn4Uhdso6t7vXrGx7g1Cd2r6NYSsxrYbQGFCMqBDhFHyK5q2UvcQ==}
+    engines: {node: '>= 12'}
+    hasBin: true
+    dev: false
 
   /mdast-util-definitions/5.1.1:
     resolution: {integrity: sha512-rQ+Gv7mHttxHOBx2dkF4HWTg+EE+UR78ptQWDylzPKaQuVGdG4HIoY3SrS/pCp80nZ04greFvXbVFHT+uf0JVQ==}

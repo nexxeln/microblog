@@ -1,0 +1,12 @@
+.microblog img {
+  --un-border-opacity: 1;
+  border-radius: 0.75rem;
+  border-width: 1px;
+  border-color: rgba(64, 64, 64, var(--un-border-opacity));
+}
+
+.microblog a {
+  --un-text-opacity: 1;
+  color: #93c5fd;
+  text-decoration: underline;
+}

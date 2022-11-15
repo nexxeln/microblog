@@ -11,6 +11,7 @@ import {
 import reset from "@unocss/reset/tailwind.css";
 
 import uno from "~/styles/uno.css";
+import globals from "~/styles/globals.css";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -21,6 +22,7 @@ export const meta: MetaFunction = () => ({
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: reset },
   { rel: "stylesheet", href: uno },
+  { rel: "stylesheet", href: globals },
 ];
 
 export default function App() {
@@ -30,12 +32,12 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
-        <main className="flex flex-col items-center h-screen bg-#050505 text-neutral-300 font-sans">
+      <body className="bg-#050505 text-neutral-300 font-sans">
+        <main className="flex flex-col items-center ">
           <h1 className="text-4xl text-red-400 text-center pt-10 font-black">
             <Link to="/">nexxel's microblog</Link>
           </h1>
-          <div className="w-4/5 md:w-2/5">
+          <div className="w-4/5 md:w-2/5 pb-10">
             <Outlet />
           </div>
         </main>

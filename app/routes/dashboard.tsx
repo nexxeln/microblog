@@ -5,6 +5,7 @@ import {
   type ActionArgs,
 } from "@remix-run/node";
 import { type User } from "@prisma/client/edge";
+import { marked } from "marked";
 import { authenticator } from "~/core/auth/auth.server";
 import { Form, useActionData, useLoaderData } from "@remix-run/react";
 import invariant from "tiny-invariant";
@@ -32,7 +33,7 @@ export const action = async ({ request }: ActionArgs) => {
 
   invariant(typeof microblog === "string", "microblog must be a string");
 
-  await createMicroblog(microblog);
+  await createMicroblog(marked.parse(microblog));
 
   return redirect("/");
 };
@@ -71,7 +72,7 @@ export default function Dashboard() {
             cols={30}
             rows={10}
             placeholder="New microblog. Markdown is enabled."
-            className="bg-neutral-9 rounded-md p-4"
+            className="bg-neutral-9 rounded-md p-4 border border-neutral-7"
           />
 
           <button type="submit" className="hover:bg-neutral-9 w-36 mx-auto">
