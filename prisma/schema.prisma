@@ -16,7 +16,7 @@ model User {
 }
 
 model Microblog {
-  id        String   @id @default(cuid())
-  createdAt DateTime @default(now())
+  id        String   @id
+  createdAt DateTime
   text      String
 }
